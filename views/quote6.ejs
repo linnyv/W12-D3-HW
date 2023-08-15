@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Quote6
+    </title>
+</head>
+<body>
+    <h1>
+        <%= "Despicable Me"%>
+    </h1>
+    <p>
+        <%= "He's so fluffy, I'm gonna die!"%>
+    </p>
+    <ul>
+        <% links.forEach(link => { %>
+          <li>
+            <a href="<%= link.url %>"><%= link.label %></a>
+          </li>
+        <% }); %>
+      </ul>
+</body>
+</html>

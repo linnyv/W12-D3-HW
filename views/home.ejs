@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+      Home
+    </title>
+</head>
+<body>
+    <h1>
+      <%="Home"%>
+    </h1>
+    <p>
+      <%= "Gonna be quoting movie quotes."%>
+    </p>
+    <ul>
+        <% links.forEach(link => { %>
+          <li>
+            <a href="<%= link.url %>"><%= link.label %></a>
+          </li>
+        <% }); %>
+      </ul>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Quote8
+    </title>
+</head>
+<body>
+    <h1>
+        <%= "The Waterboy" %>
+    </h1>
+    <p>
+        <%= "Now that's what I call high quality H2O." %>
+    </p>
+    <ul>
+        <% links.forEach(link => { %>
+          <li>
+            <a href="<%= link.url %>"><%= link.label %></a>
+          </li>
+        <% }); %>
+      </ul>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Quote5
+    </title>
+</head>
+<body>
+    <h1>
+        <%="How the the Grinch Stole Christmas"%>
+    </h1>
+    <p>
+        <%="Even if I wanted to go, my schedule wouldn't allow it. 4:00, wallow in self pity; 4:30, stare into the abyss; 5:00, solve world hunger, tell no one; 5:30, Jazzercise; 6:30, dinner with me — I can't cancel that again; 7:00, wrestle with my self-loathing. ... I'm booked. Of course, if I bump the loathing to 9, I could still be done in time to lay in bed, stare at the ceiling, and slip slowly into madness".%>
+    </p>
+    <ul>
+        <% links.forEach(link => { %>
+          <li>
+            <a href="<%= link.url %>"><%= link.label %></a>
+          </li>
+        <% }); %>
+      </ul>
+</body>
+</html>

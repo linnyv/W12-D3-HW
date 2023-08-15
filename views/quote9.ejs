@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Quote9
+    </title>
+</head>
+<body>
+    <h1>
+        <%="The Grim Adventures of Billy and Mandy"%>
+    </h1>
+    <p>
+        <%="I thought you were BADDD! You ain't BAD! You ain't NUTTIN'!"%>
+    </p>
+    <ul>
+        <%links.forEach(link => { %>
+          <li>
+            <a href="<%= link.url %>"><%= link.label %></a>
+          </li>
+        <% });%>
+      </ul>
+</body>
+</html>

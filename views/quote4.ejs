@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Quote4
+    </title>
+</head>
+<body>
+    <h1>
+        <%= "Elf"%>
+    </h1>
+    <p>
+        <%= "You sit on a throne of lies."%>
+    </p>
+    <ul>
+        <% links.forEach(link => { %>
+          <li>
+            <a href="<%= link.url %>"><%= link.label %></a>
+          </li>
+        <% }); %>
+      </ul>
+</body>
+</html>
