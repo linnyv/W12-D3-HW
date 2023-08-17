@@ -4,16 +4,17 @@
     <title>
         Quote3
     </title>
+    <link rel="stylesheet" href="/public/style/style.css">
 </head>
 <body>
     <h1>
         <%="Ace Ventura: Pet Detective"%>
     </h1>
     <p>
-        <%="If I'm not back in five minutes, just wait longer".%>
+        <%="If I'm not back in five minutes, just wait longer."%>
     </p>
     <ul>
-        <% links.forEach(link => { %>
+        <% links.forEach((link) => { %>
           <li>
             <a href="<%= link.url %>"><%= link.label %></a>
           </li>

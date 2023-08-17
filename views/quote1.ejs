@@ -4,6 +4,7 @@
     <title>
         Quote1
     </title>
+    <link rel="stylesheet" href="/public/style/style.css">
 </head>
 <body>
     <h1>
@@ -13,7 +14,7 @@
         <%= "It's just a flesh wound."%>
     </p>
     <ul>
-        <% links.forEach(link => { %>
+        <% links.forEach((link) => { %>
           <li>
             <a href="<%= link.url %>"><%= link.label %></a>
           </li>

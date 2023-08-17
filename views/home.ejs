@@ -4,6 +4,7 @@
     <title>
       Home
     </title>
+    <link rel="stylesheet" href="/public/style/style.css">
 </head>
 <body>
     <h1>
@@ -13,7 +14,7 @@
       <%= "Gonna be quoting movie quotes."%>
     </p>
     <ul>
-        <% links.forEach(link => { %>
+        <% links.forEach((link) => { %>
           <li>
             <a href="<%= link.url %>"><%= link.label %></a>
           </li>

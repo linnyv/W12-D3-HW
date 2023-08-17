@@ -1,30 +1,24 @@
 const express = require("express");
 
-const server = express()
+const server = express();
 const PORT = process.env.PORT || 3009
 
 //View engine
 server.set("view engine", "ejs");
 
-server.get("/", (req, res)=>{
-    res.status(200).json({message: "API UP!"})
-});
-
-server.listen(PORT, ()=>{
-    console.log(`Server is listening at: ${PORT}`)
-});
+server.use(express.static(__dirname + '/public'));
 
 const routes = [
-    { URL: "/home", label: "Home" },
-    { URL: "/quote1", label: "Quote 1" },
-    { URL: "/quote2", label: "Quote 2" },
-    { URL: "/quote3", label: "Quote 3" },
-    { URL: "/quote4", label: "Quote 4" },
-    { URL: "/quote5", label: "Quote 5" },
-    { URL: "/quote6", label: "Quote 6" },
-    { URL: "/quote7", label: "Quote 7" },
-    { URL: "/quote8", label: "Quote 8" },
-    { URL: "/quote9", label: "Quote 9" },
+    { url: "/home", label: "Home" },
+    { url: "/quote1", label: "Quote 1" },
+    { url: "/quote2", label: "Quote 2" },
+    { url: "/quote3", label: "Quote 3" },
+    { url: "/quote4", label: "Quote 4" },
+    { url: "/quote5", label: "Quote 5" },
+    { url: "/quote6", label: "Quote 6" },
+    { url: "/quote7", label: "Quote 7" },
+    { url: "/quote8", label: "Quote 8" },
+    { url: "/quote9", label: "Quote 9" },
   ];
 
   server.use((req, res, next) => {
@@ -82,12 +76,19 @@ server.get('/quote9', (req, res) => {
     res.render('quote9');
 });
 
+server.get("/", (req, res)=>{
+    res.status(200).json({message: "API UP!"})
+});
+
+server.listen(PORT, ()=>{
+    console.log(`Server is listening at: ${PORT}`)
+});
 
 /*in theory, should be a quicker way to render the routes instead of the above: 
 
 routes.forEach((routes) => {
-    server.get(route.URL, (req, res) => {
-        res.render(route.URL.slice(1));
+    server.get(route url, (req, res) => {
+        res.render(route url.slice(1));
     });
 }); 
 */
